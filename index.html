@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Разбор @andreyandreev.me · 17.09.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--ink2:#3A3A3A;--mut:#6B6B6B;--line:#E6E6E6;--blue:#BFDDFB;--bls:#DCEBFC;--bl:#2F80ED;--coral:#E8563F;--grey:#F5F5F5;--dark:#2B2B2B}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+section{padding:92px 0;border-top:1px solid var(--line)}
+section.grey{background:var(--grey)}
+section.dark{background:var(--dark);color:#fff;border-top:0}
+.lab{display:inline-flex;gap:10px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--mut);margin-bottom:20px;letter-spacing:.02em}
+.lab:before{content:"✳";color:var(--coral)}
+.dark .lab{color:#b9b9b9}
+h1{font-weight:500;font-size:clamp(31px,7.4vw,104px);letter-spacing:-.045em;line-height:.96;overflow-wrap:anywhere}
+h2{font-weight:500;font-size:clamp(30px,4.2vw,54px);letter-spacing:-.04em;line-height:1.04;margin-bottom:14px}
+h3{font-weight:500;font-size:21px;letter-spacing:-.02em;line-height:1.2}
+u,.u{text-decoration:none;box-shadow:inset 0 -.09em 0 var(--bl)}
+.dark u,.dark .u{box-shadow:inset 0 -.09em 0 #8cc4ff}
+.lead{font-size:19px;line-height:1.5;color:var(--ink2);max-width:760px;margin-top:16px}
+.lead:before{content:":: ";font-family:'JetBrains Mono',monospace;color:var(--bl)}
+.dark .lead{color:#ddd}
+.sub{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--mut);letter-spacing:.02em}
+
+/* hero */
+.hero{padding:34px 0 76px;border-top:0}
+.htop{display:flex;align-items:center;gap:12px;padding:8px 0 44px;flex-wrap:wrap}
+.htop img{width:40px;height:40px;border-radius:50%}
+.htop .t{font-family:'JetBrains Mono',monospace;font-size:12.5px;background:var(--grey);border-radius:8px;padding:8px 12px;line-height:1.35}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:54px}
+.nums>div{padding:22px 20px 22px 0;border-bottom:1px solid var(--line)}
+.nums>div+div{border-left:1px solid var(--line);padding-left:20px}
+.nums b{display:block;font-size:clamp(26px,3.1vw,44px);font-weight:500;letter-spacing:-.045em;line-height:1;white-space:nowrap}
+.nums span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);display:block;margin-top:10px;line-height:1.45;white-space:normal}
+.nums em{font-style:normal;color:var(--bl)}
+.trio{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:clamp(20px,2.3vw,30px);font-weight:500;letter-spacing:-.04em}
+.trio i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--mut)}
+.trio .dn{color:var(--coral)}
+
+/* phones */
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:40px;align-items:start}
+.ph{border:1px solid var(--line);border-radius:26px;padding:12px;background:#fff}
+.ph .cap{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);padding:6px 10px 12px;display:flex;justify-content:space-between;gap:10px}
+.ph .cap b{font-weight:500;color:var(--ink)}
+.ph .scr{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.mock{padding:18px 16px 22px;font-size:14px}
+.mock .row{display:flex;gap:16px;align-items:center}
+.mock .row img{width:66px;height:66px;border-radius:50%;border:2px solid var(--line)}
+.mock .st{display:flex;gap:16px;font-size:13px;min-width:0}
+.mock .st b{display:block;font-weight:600;font-size:15px}
+.mock .st span{color:var(--mut);font-size:11.5px;white-space:nowrap}
+@media(max-width:520px){.mock .st{gap:11px}.mock .st span{font-size:10.5px}.mock .st b{font-size:14px}}
+.mock .nm{font-weight:600;margin:16px 0 2px;line-height:1.3}
+.mock .cat{color:var(--mut);font-size:13px;margin-bottom:10px}
+.mock .bio div{line-height:1.45}
+.mock .lnk{margin-top:12px;font-weight:600;color:#00376b;font-size:13.5px}
+.mock .btns{display:flex;gap:8px;margin-top:14px}
+.mock .btns span{flex:1;background:var(--grey);border-radius:8px;text-align:center;padding:8px;font-size:12.5px;font-weight:600}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{font-family:'JetBrains Mono',monospace;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;cursor:pointer;color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--blue);border-color:var(--blue)}
+.tabs .rec:after{content:" ✓";color:var(--bl)}
+.cnt{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);margin-top:12px;display:flex;gap:16px;flex-wrap:wrap}
+.cnt b{font-weight:500;color:var(--ink)}
+.vnote{background:var(--bls);border-radius:12px;padding:14px 16px;font-size:14.5px;line-height:1.5;margin-top:12px;color:var(--ink2)}
+.cut{color:var(--mut)}
+
+/* lists */
+.rows{border-top:1px solid var(--line)}
+.rw{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);font-size:16px;line-height:1.5;align-items:start}
+.rw b{font-family:'JetBrains Mono',monospace;font-weight:400;color:var(--mut);font-size:13px;padding-top:3px}
+.rw.ok b{color:var(--bl)}
+.rw.bad b{color:var(--coral)}
+.dark .rows,.dark .rw{border-color:#444}.dark .rw b{color:#aaa}
+
+/* highlight cards */
+.hl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.hc{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;cursor:zoom-in;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;padding:0}
+.hc .im{height:132px;overflow:hidden;background:var(--grey);border-bottom:1px solid var(--line)}
+.hc .im img{width:100%;height:100%;object-fit:cover;object-position:top}
+.hc .bd{padding:16px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.hc .mt{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);line-height:1.5}
+.hc p{font-size:14.5px;line-height:1.45;color:var(--ink2);margin-top:auto}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11.5px;border-radius:999px;padding:5px 12px;align-self:flex-start}
+.t-keep{background:var(--blue)}.t-re{background:var(--bls)}.t-hide{background:var(--grey);color:var(--mut)}.t-kill{background:var(--coral);color:#fff}
+#lb{position:fixed;inset:0;background:rgba(17,17,17,.94);display:none;z-index:50;overflow:auto;padding:70px 20px 40px}
+#lb.on{display:block}
+#lb img{margin:0 auto;max-width:1000px;width:100%}
+#lb .x{position:fixed;top:18px;right:22px;background:#fff;border:0;border-radius:999px;width:44px;height:44px;font-size:18px;cursor:pointer;font-family:'JetBrains Mono',monospace}
+#lb .ti{color:#fff;font-family:'JetBrains Mono',monospace;font-size:13px;max-width:1000px;margin:0 auto 14px}
+
+/* route */
+.route{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}
+.rn{text-align:center}
+.rn i{display:grid;place-items:center;width:78px;height:78px;border-radius:50%;margin:0 auto 12px;background:var(--blue);font-family:'JetBrains Mono',monospace;font-size:14px;font-style:normal;font-weight:500}
+.rn.g i{background:var(--grey)}
+.rn span{font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.4;display:block}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:13px;list-style:none;display:flex;justify-content:space-between;gap:14px}
+details summary::-webkit-details-marker{display:none}
+details summary:after{content:"+";color:var(--bl)}
+details[open] summary:after{content:"–"}
+details .in{font-size:15.5px;line-height:1.55;margin-top:14px;color:var(--ink2);max-width:860px}
+details .in ol{margin:0;padding-left:20px}
+details .in li{margin:6px 0}
+
+/* feed */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+.box{border:1px solid var(--line);border-radius:20px;padding:26px 26px 30px;background:#fff}
+.box.blue{background:var(--blue);border-color:var(--blue)}
+.box h3{margin-bottom:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px;margin-top:8px}
+.tbl th{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);font-weight:400;text-align:right;padding:8px 0;border-bottom:1px solid var(--line)}
+.tbl th:first-child{text-align:left}
+.tbl td{padding:10px 0;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.tbl td:first-child{text-align:left;white-space:normal;padding-right:12px}
+.box.blue .tbl th,.box.blue .tbl td{border-color:rgba(17,17,17,.14)}
+.box.blue .tbl th{color:#1f4f8a}
+.chart{margin-top:30px}
+.bar{display:grid;grid-template-columns:230px 1fr 100px;gap:16px;align-items:center;padding:10px 0;font-size:15px}
+.bar .t{font-size:14.5px;line-height:1.35}
+.bar .t i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);display:block}
+.bar .g{height:26px;background:var(--grey);border-radius:4px;overflow:hidden}
+.bar .g span{display:block;height:100%;background:var(--blue);border-radius:4px}
+.bar.top .g span{background:var(--bl)}
+.bar .v{font-family:'JetBrains Mono',monospace;font-size:13px;text-align:right}
+.brk{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+.bk{position:relative;background:#2b2b2b;color:#fff;padding:24px 24px 28px;min-height:190px}
+.bk span.c{position:absolute;width:12px;height:12px;border:2px solid #fff}
+.c1{left:0;top:0;border-right:0;border-bottom:0}.c2{right:0;top:0;border-left:0;border-bottom:0}
+.c3{left:0;bottom:0;border-right:0;border-top:0}.c4{right:0;bottom:0;border-left:0;border-top:0}
+.bk .n{font-family:'JetBrains Mono',monospace;font-size:12px;color:#8cc4ff;margin-bottom:12px}
+.bk h3{margin-bottom:10px}
+.bk p{font-size:14.5px;line-height:1.5;color:#e4e4e4}
+
+/* funnel */
+.fn{display:flex;gap:8px;margin-top:34px;align-items:stretch;overflow-x:auto;padding-bottom:6px}
+.fs{flex:1 1 0;min-width:112px;border:1px solid var(--line);border-radius:16px;padding:16px 14px 18px;background:#fff;display:flex;flex-direction:column;gap:8px}
+.fs.hot{background:var(--blue);border-color:var(--blue)}
+.fs.end{background:var(--grey)}
+.fs b{font-size:clamp(18px,1.9vw,26px);font-weight:500;letter-spacing:-.04em;line-height:1}
+.fs .k{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--mut);line-height:1.4}
+.fs.hot .k{color:#1f4f8a}
+.fs p{font-size:13px;line-height:1.4;color:var(--ink2);margin-top:auto}
+.drop{display:flex;align-items:center;justify-content:center;flex:0 0 92px;min-width:92px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--coral);text-align:center;line-height:1.45;border-left:1px dashed var(--coral);border-right:1px dashed var(--coral);padding:0 5px}
+.arr{flex:0 0 22px;min-width:22px;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;color:var(--mut)}
+.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.mini div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.5}
+.mini b{display:block;font-family:Inter,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.03em;margin-bottom:8px}
+
+/* plan */
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
+.ck{list-style:none}
+.ck li{position:relative;padding:13px 0 13px 30px;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.5}
+.ck li:before{content:"☐";position:absolute;left:0;top:13px;font-family:'JetBrains Mono',monospace;color:var(--bl);font-size:15px}
+.dark .ck li{border-color:#444}.dark .ck li:before{color:#8cc4ff}
+.keep{background:var(--blue);border-radius:20px;padding:30px;margin-top:40px}
+.keep h3{margin-bottom:10px}
+.keep p{font-size:16px;line-height:1.55;color:var(--ink2);max-width:860px}
+footer{background:var(--grey);padding:60px 0 70px;font-size:15px}
+footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);margin-top:34px;line-height:1.7}
+
+@media(max-width:980px){
+.wrap{padding:0 20px}section{padding:60px 0}
+.nums{grid-template-columns:1fr 1fr}.nums>div:nth-child(odd){border-left:0;padding-left:0}
+.nums>div{padding-right:14px}.nums>div:nth-child(even){padding-left:16px}
+.phones{grid-template-columns:1fr;gap:26px}
+.hl{grid-template-columns:1fr 1fr}
+.route{grid-template-columns:1fr 1fr 1fr}
+.two,.plan{grid-template-columns:1fr;gap:26px}
+.brk{grid-template-columns:1fr}
+.bar{grid-template-columns:1fr;gap:6px}.bar .v{text-align:left}
+.mini{grid-template-columns:1fr 1fr}
+.fn{gap:6px}.fs{min-width:172px}.drop{min-width:104px;flex-basis:104px}
+}
+@media(max-width:520px){.hl{grid-template-columns:1fr}.route{grid-template-columns:1fr 1fr}.mini{grid-template-columns:1fr}}
+</style></head><body>
+
+<header class="wrap hero">
+<div class="htop"><img src="img/avatar.jpg" alt=""><span class="t">@andreyandreev.me<br>разбор аккаунта</span></div>
+<h1>Разбор <u>@andreyandreev.me</u></h1>
+<p class="lead">Выгрузка 17.09.2026, 14:40 МСК. Профиль, 150 публикаций с 25.07 по 17.09, инсайты по каждой, статистика за 30 и 90 дней, все восемь актуальных с датами, воронки из ChatPlace, сайт из Метрики. Где данных нет, так и написано.</p>
+
+<div class="nums">
+<div><b>69 275</b><span>подписчиков · 1 901 публикация · 121 подписка</span></div>
+<div><b>654 817</b><span>охват аккаунта за 30 дней, 19.08–17.09</span></div>
+<div><b>0,48 %</b><span>481 058 охвата → 2 329 входов в воронку → <em>4 заявки</em></span></div>
+<div><b>4 дня</b><span>до старта шестого потока 21.09</span></div>
+</div>
+
+<p class="sub" style="margin-top:34px">охват по трём 30-дневным окнам</p>
+<div class="trio" style="margin-top:12px">
+<span>995 830</span><i>20.06–19.07</i><span class="dn">→</span>
+<span>586 717</span><i>20.07–18.08</i><span class="dn">→</span>
+<span>654 817</span><i>19.08–17.09</i>
+</div>
+<p class="lead" style="margin-top:20px">От июньско-июльского пика минус треть. Вовлечённых аккаунтов за те же окна: 125 361 → 57 531 → 55 360. Контента при этом стало больше.</p>
+</header>
+
+<!-- 2. ШАПКА -->
+<section id="shapka" class="grey"><div class="wrap">
+<div class="lab">Раздел 01 · шапка профиля</div>
+<h2>Было <u>и стало</u></h2>
+<p class="lead">Ты сказал: «пока непонятно до конца, что я продаю». Шапка это подтверждает буквально. Слева — то, что реально видит новый человек с телефона. Справа — три варианта, между которыми выбираешь.</p>
+
+<div class="phones">
+  <div class="ph">
+    <div class="cap"><b>Было</b><span>17.09.2026 · мобильный</span></div>
+    <div class="scr"><img src="img/bylo_header.jpg" alt="Шапка профиля 17.09.2026"></div>
+  </div>
+  <div class="ph">
+    <div class="cap"><b>Стало</b><span>три варианта · лимит 150 знаков</span></div>
+    <div class="tabs" role="tablist">
+      <button class="rec" role="tab" aria-selected="true" data-v="1">вариант 1 · рекомендую</button>
+      <button role="tab" aria-selected="false" data-v="2">вариант 2</button>
+      <button role="tab" aria-selected="false" data-v="3">вариант 3</button>
+    </div>
+    <div class="scr"><div class="mock">
+      <div class="row"><img src="img/avatar.jpg" alt="">
+        <div class="st"><div><b>1 901</b><span>публикаций</span></div><div><b>69,2 тыс.</b><span>подписчиков</span></div><div><b>121</b><span>подписок</span></div></div>
+      </div>
+      <div class="nm" id="m-name">Андрей Андреев · AI-агенты для рилсов и постов</div>
+      <div class="cat">Консультант</div>
+      <div class="bio" id="m-bio"></div>
+      <div class="lnk">Агент монтирует рилс за 30 минут</div>
+      <div class="btns"><span>Подписаться</span><span>Написать</span></div>
+    </div></div>
+    <div class="cnt"><span>био <b id="c-bio">114</b> / 150</span><span>имя <b id="c-name">46</b></span><span id="c-lines">строк: 3, все видны</span></div>
+    <div class="vnote" id="m-note"></div>
+  </div>
+</div>
+
+<h3 style="margin-top:56px">Что не так сейчас</h3>
+<div class="rows" style="margin-top:14px">
+<div class="rw bad"><b>01</b><span><b>Пятая строка обрезана.</b> На мобильном био схлопывается после четвёртой строки: видно «Напишите слово… <span class="cut">ещё</span>». Само слово «экскурсия» спрятано под кат. Единственное действие, которое ты просишь сделать, новый человек не видит, пока не ткнёт в «ещё».</span></div>
+<div class="rw bad"><b>02</b><span><b>Вторая ссылка тоже спрятана.</b> Видно «andreyandreev.me и ещё 1». Эфир по AI-агентам лежит за этим «ещё 1».</span></div>
+<div class="rw bad"><b>03</b><span><b>Первые три строки — про тебя, четвёртая — про продукт, которого ещё нет у читателя в голове.</b> Человек, который только что долистал карусель про Рейчел Каск, ищет ответ на вопрос «кто это и что он мне может сделать», а получает три манифеста и аббревиатуру: «Группа по ai». Какая группа. По какому ai. Для кого.</span></div>
+<div class="rw bad"><b>04</b><span><b>Имя не работает на поиск.</b> Поле имени индексируется поиском Instagram. Сейчас там «Предприниматель, коуч, рассказчик» — три слова, по которым тебя никто не ищет. Слов «рилс», «монтаж», «AI-агент» в индексируемом поле нет вообще.</span></div>
+<div class="rw bad"><b>05</b><span><b>Ссылка ведёт в оглавление.</b> «Курсы, коучинг, проекты» → andreyandreev.me: восемь пунктов от MBGA до фотопроектов и телеграм-канала. Ни одной цены. Продукта, на который «самый большой спрос», в шапке нет ни словом.</span></div>
+</div>
+
+<div class="two" style="margin-top:44px">
+<div class="box"><h3>Ссылки переименовать</h3><p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink2)">«Курсы, коучинг, проекты» — это каталог. Под новый оффер первая ссылка ведёт на страницу агента и называется тем, что человек получит: «Агент монтирует рилс за 30 минут». Вторая ведёт в бот Hey Sash с меткой <span class="mono" style="font-size:13px">dl-1789460905270</span>; куда она приземляет, я не проверял — пришлось бы входить в чужую воронку. Если это эфир 18.09, после эфира её надо заменить.</p></div>
+<div class="box"><h3>Категория</h3><p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink2)">«Предприниматель» — самая общая из возможных. Под продукт ближе «Консультант» или «Цифровой создатель». Мелочь, но она стоит одного клика.</p></div>
+</div>
+</div></section>
+
+<!-- 3. АКТУАЛЬНЫЕ -->
+<section id="hl"><div class="wrap">
+<div class="lab">Раздел 02 · актуальные</div>
+<h2>Восемь блоков, <u>275 сторис</u></h2>
+<p class="lead">Ты сказал «древние» — это мягко. Из восьми блоков семь не обновлялись больше года, шесть — больше двух лет. Половина всех сторис в актуальных (129 из 275) снята в 2019–2020 годах. Нажми на карточку — откроется контактный лист целиком.</p>
+
+<div class="hl">
+<button class="hc" data-img="img/sheet_group.jpg" data-ti="Закрытая группа · 10 сторис">
+  <div class="im"><img src="img/sheet_group.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Закрытая группа</h3><div class="mt">10 сторис · 15.04.2026 → 08.07.2026</div><span class="tag t-re">пересобрать</span>
+  <p>Единственный блок про действующий продукт: «5+ млн охватов», «156 заказов на 318 350», два кейса учениц. Ломает его одна сторис — таблица набора «Апрель — Май — Июнь». На дворе сентябрь.</p></div></button>
+
+<button class="hc" data-img="img/sheet_new.jpg" data-ti="Новеньким · 26 сторис">
+  <div class="im"><img src="img/sheet_new.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Новеньким</h3><div class="mt">26 сторис · 14.03.2026 (все за один день)</div><span class="tag t-kill">снести</span>
+  <p>Твой главный вход для нового человека, отставший на полгода: «52,9 тыс. подписчиков» вместо 69,3, фокус «деньги и мышление» вместо блога и агентов, ссылка на мартовскую распродажу.</p></div></button>
+
+<button class="hc" data-img="img/sheet_about.jpg" data-ti="Обо мне · 27 сторис">
+  <div class="im"><img src="img/sheet_about.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Обо мне</h3><div class="mt">27 сторис · 31.08.2023</div><span class="tag t-keep">оставить</span>
+  <p>Единственный блок, который можно не трогать по содержанию: магазин минус 2 млн, Porsche минус 4 млн, «жена, трое детей и 45 рублей на карте». Заменить только финал: он зовёт к анкете, которой в шапке нет.</p></div></button>
+
+<button class="hc" data-img="img/sheet_body.jpg" data-ti="Тело · 17 сторис">
+  <div class="im"><img src="img/sheet_body.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Тело</h3><div class="mt">17 сторис · 19.08.2022 → 27.01.2024</div><span class="tag t-hide">скрыть</span>
+  <p>Гимнастика с 37 лет, материал хороший, но как отдельный блок не обслуживает ни один продукт. Два сильнейших кадра («колесо. кривое» → сальто через два года) забрать в «Кто я».</p></div></button>
+
+<button class="hc" data-img="img/sheet_photo.jpg" data-ti="Фотография · 66 сторис">
+  <div class="im"><img src="img/sheet_photo.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Фотография</h3><div class="mt">66 сторис · 16.02.2020 → 03.05.2023</div><span class="tag t-re">пересобрать</span>
+  <p>Единственное место в профиле, где строка «Красота в простоте» чем-то доказана. Держать стоит, но 66 кадров без подписей никто не пролистает — оставить 12–15.</p></div></button>
+
+<button class="hc" data-img="img/sheet_tantra.jpg" data-ti="Тантра · 66 сторис">
+  <div class="im"><img src="img/sheet_tantra.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Тантра</h3><div class="mt">66 сторис · 27.03.2020 → 04.08.2020</div><span class="tag t-hide">скрыть</span>
+  <p>Отзывы об эфирах подкаста и ссылки на IGTV — формата, которого больше не существует. Шесть лет назад, другой бизнес, другая аудитория.</p></div></button>
+
+<button class="hc" data-img="img/sheet_daughters.jpg" data-ti="3 дочки · 44 сторис">
+  <div class="im"><img src="img/sheet_daughters.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>3 дочки</h3><div class="mt">44 сторис · 29.03.2019 → 27.02.2023</div><span class="tag t-hide">скрыть</span>
+  <p>В «Новеньким» ты сам говоришь, что старшая и средняя «практически не видны в аккаунте, не разрешают публиковать». Блок с их фотографиями из 2019–2022 этому противоречит.</p></div></button>
+
+<button class="hc" data-img="img/sheet_voice.jpg" data-ti="Голос · 19 сторис">
+  <div class="im"><img src="img/sheet_voice.jpg" alt="" loading="lazy"></div>
+  <div class="bd"><h3>Голос</h3><div class="mt">19 сторис · 29.07.2022 → 01.08.2022</div><span class="tag t-kill">снести</span>
+  <p>Четыре дня занятий с преподавателем. Это дневник. Навигацию он не обслуживает.</p></div></button>
+</div>
+
+<h3 style="margin-top:64px">Новая линейка — шесть блоков</h3>
+<p class="sub" style="margin-top:10px">порядок слева направо — маршрут нового человека; Instagram показывает на мобильном примерно шесть кружков</p>
+<div class="route">
+<div class="rn"><i>01</i><span>Рилсы<br>за 30 мин</span></div>
+<div class="rn"><i>02</i><span>Кейсы</span></div>
+<div class="rn"><i>03</i><span>Группа<br>по AI</span></div>
+<div class="rn g"><i>04</i><span>Новеньким</span></div>
+<div class="rn g"><i>05</i><span>Кто я</span></div>
+<div class="rn g"><i>06</i><span>Красота<br>в простоте</span></div>
+</div>
+
+<div style="margin-top:34px">
+<details open><summary><span>01 · «Рилсы за 30 мин» — новый, главный, 6–8 сторис</span></summary><div class="in"><ol>
+<li>Исходник: сырой дубль, таймкод.</li>
+<li>Тот же ролик готовым, таймкод. Разница подписью.</li>
+<li>Что агент сделал: вырезал паузы, собрал субтитры, поставил врезки, сделал обложку.</li>
+<li>Что это стоило раньше: подрядчик, срок, сумма. На <span class="mono" style="font-size:13px">/ai-montage/</span> уже посчитано — 45 000 ₽ подрядчикам против расходов на агента; возьми оттуда.</li>
+<li>Три готовых ролика подряд — чтобы видно было, что это не один удачный случай.</li>
+<li>Кому не подойдёт. Честно: нужна подписка на Claude Code, карта другой страны, сервер. Это отсеет тех, кто потом попросит вернуть деньги.</li>
+<li>«Напишите слово МОНТАЖ» — и это должно работать, сегодня не работает.</li>
+</ol></div></details>
+
+<details><summary><span>02 · «Кейсы» — новый, второй по важности, по 3 сторис на историю</span></summary><div class="in">
+<p>4–5 историй. Материал уже есть и лежит мёртвым: в «Закрытой группе» — кейс с 248к просмотров за неделю и кейс «смелость быть собой» (55к и миллион просмотров); в ленте — Даша Морозова («5 постов за 7,5 месяцев, потом 14 публикаций за 23 дня», охват поста 1 134) и Наташа @gde_moy_million (охват 5 038).</p>
+<p style="margin-top:10px">Схема сторис: было → что делали → что стало цифрой → скрин или реплика человека. Согласие спросить.</p>
+</div></details>
+
+<details><summary><span>03 · «Группа по AI» — пересобранная «Закрытая группа»</span></summary><div class="in">
+<p>Убрать таблицу апрель-май-июнь. Поставить: что происходит по неделям, сколько длится, цена (в ChatPlace лежат кнопки на 14 900 и 19 900 ₽ — назови её словами прямо в сторис), когда ближайший старт, слово ЭКСКУРСИЯ.</p></div></details>
+
+<details><summary><span>04 · «Новеньким» — переснять целиком, 10–12 сторис вместо 26</span></summary><div class="in">
+<p>Сегодняшние цифры, сегодняшний фокус, сегодняшние продукты, живые ссылки. И короче: 26 сторис никто не досматривает.</p></div></details>
+
+<details><summary><span>05 · «Кто я» — из «Обо мне», почти без правок</span></summary><div class="in">
+<p>Заменить финальную сторис на актуальное действие. Добавить два кадра из «Тела» как доказательство метода маленьких шагов.</p></div></details>
+
+<details><summary><span>06 · «Красота в простоте» — из «Фотографии», 12–15 лучших кадров</span></summary><div class="in">
+<p>Один блок, который держит ценностную строку из шапки.</p>
+<p style="margin-top:10px">И общее по всем шести: обложки в одном стиле, одно слово на обложку. Сейчас у «Закрытой группы» обложка обрезается до «Закрыта…», у «Фотографии» — до «Фотогра…». Это верный признак, что название длиннее, чем помещается.</p></div></details>
+</div>
+</div></section>
+
+<!-- 4. ЛЕНТА -->
+<section id="feed" class="grey"><div class="wrap">
+<div class="lab">Раздел 03 · лента · 25.07–17.09, 55 дней</div>
+<h2>Что работает <u>и что нет</u></h2>
+<p class="lead">В ленту ушло 93 публикации: 79 каруселей, 13 рилсов, 1 фото. Плюс 57 пробных рилсов, которых на сетке нет. Топ-5 публикаций дали 39 % всего охвата ленты, топ-10 — 56 %. При этом 44 публикации из 93 набрали меньше 5 000 — это меньше 7 % собственной аудитории.</p>
+
+<div class="two">
+<div class="box blue">
+<h3>Работает</h3>
+<p style="font-size:15.5px;line-height:1.55;color:var(--ink2)">Цитатные карусели про людей и книги — 20 публикаций, медиана охвата 22 998, сохранений 334, репостов 167. Общее у всех: год, имя, профессия, конкретное событие в первой строке подписи.</p>
+<table class="tbl"><tr><th>пост</th><th>охват</th><th>сохр.</th><th>комм.</th></tr>
+<tr><td>05.09 Рейчел Каск</td><td>140 694</td><td>2 068</td><td>479</td></tr>
+<tr><td>03.09 письмо в 2011 год</td><td>121 551</td><td>2 611</td><td>258</td></tr>
+<tr><td>25.08 Эндрю Соломон</td><td>101 838</td><td>2 281</td><td>60</td></tr>
+<tr><td>22.08 отец на конвейере</td><td>58 170</td><td>2 071</td><td>48</td></tr>
+<tr><td>01.08 эксперимент Лангер</td><td>47 346</td><td>791</td><td>77</td></tr>
+<tr><td>12.09 муми-тролли</td><td>36 510</td><td>1 095</td><td>17</td></tr></table>
+<p style="font-size:15.5px;line-height:1.55;color:var(--ink2);margin-top:18px">Продающие карусели, когда это история: 22.08 «Шестой поток» — 166 002 охвата и 1 437 комментариев; 26.07 «Пятый поток» — 119 441 и 1 147. Четыре таких поста дали 379 тысяч охвата и 3 190 комментариев.</p>
+<p style="font-size:15.5px;line-height:1.55;color:var(--ink2);margin-top:14px">Прямое приглашение в коучинг: 25.07 — 37 589 охвата, 1 725 сохранений. За 55 дней тема поднималась трижды.</p>
+<p style="font-size:15.5px;line-height:1.55;color:var(--ink2);margin-top:14px">Анонс эфира каруселью: 26.08 — 77 593 охвата, 2 162 репоста. На следующий день такой же анонс без карусельной истории — 10 055. Один и тот же эфир, разница в семь раз.</p>
+</div>
+
+<div class="box">
+<h3>Не работает</h3>
+<table class="tbl"><tr><th>тема</th><th>постов</th><th>охват</th><th>сохр.</th></tr>
+<tr><td>Цитатные карусели</td><td>20</td><td>22 998</td><td>334</td></tr>
+<tr><td>Коучинг</td><td>3</td><td>14 068</td><td>213</td></tr>
+<tr><td>Личное и разное</td><td>16</td><td>7 650</td><td>75</td></tr>
+<tr><td>AI, агенты, инструменты</td><td>13</td><td>4 655</td><td>41</td></tr>
+<tr><td>Обучение блогу</td><td>12</td><td>4 114</td><td>69</td></tr>
+<tr><td>Отчёты о статистике</td><td>3</td><td>2 379</td><td>12</td></tr></table>
+<p class="sub" style="margin-top:10px">медианы охвата и сохранений по рубрикам</p>
+<div class="rows" style="margin-top:20px">
+<div class="rw bad"><b>01</b><span><b>«Итоги недели».</b> Три поста, медиана 2 379, сохранений 12, репостов 3. «12 публикаций, 203 072 охвата, +525 подписчиков» — это интересно тебе и трём коллегам. Подписчику это не даёт ни действия, ни мысли, ни применения.</span></div>
+<div class="rw bad"><b>02</b><span><b>«Эксперту такому-то, это для вас».</b> Фитнес-тренеры 4 196, нутрициологи 4 032, репетиторы 3 549. Формат обращается к чужой профессии, а твоя аудитория — не тренеры и не репетиторы.</span></div>
+<div class="rw bad"><b>03</b><span><b>«10 красных флагов».</b> Флаг №1 — 3 450, флаг №6 — 4 655. Серия из десяти постов на теме, где у тебя есть и материал, и право говорить, идёт вдвое ниже медианы каруселей.</span></div>
+<div class="rw bad"><b>04</b><span><b>Несшитая обложка и подпись.</b> 13.08: обложка про выгорание, подпись «Написали пост про выгорание. Перечитали — сильно…» — 2 234. Человека позвали думать, а подпись говорит о технике письма.</span></div>
+<div class="rw bad"><b>05</b><span><b>Пробные рилсы.</b> 57 штук за 55 дней, суммарный охват 50 850 — 3 % охвата ленты. Медиана охвата 224, медиана комментариев 0. Семь дней производства за 50 тысяч охвата — при том что одна карусель про Каск дала 140 тысяч.</span></div>
+</div>
+</div>
+</div>
+
+<h3 style="margin-top:60px">Медиана охвата по рубрикам</h3>
+<div class="chart">
+<div class="bar top"><div class="t">Цитатные карусели<i>20 постов · сохранений 334</i></div><div class="g"><span style="width:100%"></span></div><div class="v">22 998</div></div>
+<div class="bar"><div class="t">Коучинг<i>3 поста · сохранений 213</i></div><div class="g"><span style="width:61.2%"></span></div><div class="v">14 068</div></div>
+<div class="bar"><div class="t">Личное и разное<i>16 постов · сохранений 75</i></div><div class="g"><span style="width:33.3%"></span></div><div class="v">7 650</div></div>
+<div class="bar"><div class="t">AI, агенты, инструменты<i>13 постов · сохранений 41</i></div><div class="g"><span style="width:20.2%"></span></div><div class="v">4 655</div></div>
+<div class="bar"><div class="t">Обучение блогу<i>12 постов · сохранений 69</i></div><div class="g"><span style="width:17.9%"></span></div><div class="v">4 114</div></div>
+<div class="bar"><div class="t">Отчёты о статистике<i>3 поста · сохранений 12</i></div><div class="g"><span style="width:10.3%"></span></div><div class="v">2 379</div></div>
+</div>
+
+<h3 style="margin-top:56px">Три поломки, которые видно только по датам</h3>
+<div class="brk">
+<div class="bk"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+<div class="n">▢ Поломка 01</div><h3>Четыре дня до старта</h3>
+<p>Шестой поток стартует 21.09, а в сентябре под него не вышло ни одной продающей карусели. Последний крупный пост под набор — 22.08: 166 002 охвата, 1 437 комментариев. После него 04.09 рилс с охватом 8 349 и 12.09 карусель с охватом 3 607. С 05.09 по 17.09 в ленте нет ни одного поста про набор, кроме одинаковых пробных рилсов.</p></div>
+
+<div class="bk"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+<div class="n">▢ Поломка 02</div><h3>Два номера у одного потока</h3>
+<p>В посте от 04.09 написано «Пятый поток закрытой группы по блогу стартует 21-го сентября». Шестой. Пятый стартовал 17 августа, и об этом есть пост от 26.07. В шапке профиля тоже написано «6-й поток».</p></div>
+
+<div class="bk"><span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+<div class="n">▢ Поломка 03</div><h3>Главный спрос без большого поста</h3>
+<p>Все публикации про AI-агента и монтаж рилсов за 55 дней: максимум 77 593 (анонс воркшопа), следующий 10 055, дальше 7 830, 7 676, 6 592. Рилсы с обложками «34 МИНУТЫ», «15 МИНУТ», «72 МИНУТЫ» — 6 711, 4 469, 3 103. Тринадцать постов на тему дали 137 150 охвата — меньше, чем одна карусель про Рейчел Каск.</p></div>
+</div>
+
+<div class="mini" style="margin-top:34px">
+<div><b>50 из 93</b>постов без CTA<br>это 54 %</div>
+<div><b>1 из 93</b>постов, где названа цена</div>
+<div><b>368</b>знаков — медиана подписи</div>
+<div><b>48 из 55</b>дней с публикациями<br>1,7 поста в ленту в день</div>
+</div>
+<p class="lead" style="margin-top:22px">С ритмом проблемы нет. Проблема с тем, что в ритм заливается.</p>
+</div></section>
+
+<!-- 5. ВОРОНКА -->
+<section id="funnel"><div class="wrap">
+<div class="lab">Раздел 04 · воронка</div>
+<h2>Где <u>рвётся</u></h2>
+<p class="lead">Кодовое слово «экскурсия», с 26.07 по 17.09. Двадцать три поста собрали 481 058 охвата и 4 484 комментария. Дальше — по шагам из ChatPlace, накопительно за жизнь воронки.</p>
+
+<div class="fn">
+<div class="fs hot"><div class="k">01 · охват</div><b>481 058</b><p>23 поста со словом «экскурсия»</p></div>
+<div class="arr">→</div>
+<div class="fs"><div class="k">02 · вошли в воронку</div><b>2 329</b><p>0,48 % от охвата; первое сообщение получили 2 324</p></div>
+<div class="drop">первый обрыв<br>−912 человек<br>на follow-gate</div>
+<div class="fs"><div class="k">03 · проверить подписку</div><b>1 412</b><p>61 % от тех, кто вошёл</p></div>
+<div class="arr">→</div>
+<div class="fs"><div class="k">04 · клик на видео</div><b>938</b><p>69 %; в бот стартовали 1 350, открыли экскурсию 1 182</p></div>
+<div class="drop">второй обрыв<br>−881 человек<br>после видео</div>
+<div class="fs"><div class="k">05 · «как применить»</div><b>57</b><p>6 % от посмотревших видео</p></div>
+<div class="arr">→</div>
+<div class="fs end"><div class="k">06 · написать Андрею</div><b>4</b><p>квиз прошли 21, «оплатить» нажали 18</p></div>
+</div>
+
+<div class="two" style="margin-top:44px">
+<div class="box"><h3>Первый обрыв — 912 человек на follow-gate</h3><p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink2)">Люди написали кодовое слово, получили в ответ проверку подписки и ушли. Тридцать девять процентов теряются до того, как им хоть что-то предложили.</p></div>
+<div class="box"><h3>Второй обрыв — 938 → 57</h3><p style="margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--ink2)">Девяносто четыре процента тех, кто открыл видео-экскурсию, не сделали следующий шаг. Напоминание после видео получили только 301 из 938. Сентябрь: 540 новых людей в боте, 0 заявок. Все четыре заявки за жизнь воронки — до сентября.</p></div>
+</div>
+
+<h3 style="margin-top:56px">Воронки под AI Reels Maker нет</h3>
+<p class="lead">Проверены стартовые слова всех 41 автоматизации на четырёх ботах и все правила автоответов. Слов «монтаж», «монтажёр», «рилс», «reels» нет ни в одном триггере. Ближайшее — слово «АГЕНТ» (288 входов с 12.08), но оно ведёт в ту же экскурсию по группе, отдельного продукта за ним нет.</p>
+
+<div class="fn" style="margin-top:26px">
+<div class="fs hot"><div class="k">шаг 1</div><b>МОНТАЖ</b><p>слово в комментариях или директе, без follow-gate</p></div>
+<div class="arr">→</div>
+<div class="fs"><div class="k">шаг 2</div><b>Бот</b><p>короткое видео «исходник → готовый рилс за 30 минут»</p></div>
+<div class="arr">→</div>
+<div class="fs"><div class="k">шаг 3</div><b>Страница</b><p>кнопка на <span class="mono" style="font-size:12px">/montager/</span></p></div>
+<div class="arr">→</div>
+<div class="fs end"><div class="k">шаг 4</div><b>Заявка</b><p>почта в предзапись</p></div>
+</div>
+
+<div class="two" style="margin-top:44px">
+<div class="box">
+<h3>Страницы под продукт есть, трафика нет</h3>
+<table class="tbl" style="margin-top:12px"><tr><th>страница</th><th>просмотров</th><th>заявок</th></tr>
+<tr><td><span class="mono" style="font-size:13px">/montager/</span> live с 16.09, noindex, не в меню</td><td>5</td><td>0</td></tr>
+<tr><td><span class="mono" style="font-size:13px">/ai-montage/</span> цена 9 900 ₽, live с 14.09, noindex</td><td>0</td><td>0</td></tr>
+<tr><td><span class="mono" style="font-size:13px">/ai-cases/</span></td><td>2</td><td>—</td></tr></table>
+<p style="margin-top:14px;font-size:15.5px;line-height:1.55;color:var(--ink2)">Цель <span class="mono" style="font-size:13px">montager_signup</span> в Метрике не заведена, хотя код страницы её вызывает. Продукт, на который самый большой спрос, сейчас существует так: страница, на которую нельзя попасть, без цены, без воронки, без кодового слова, с нулём заявок.</p>
+<p style="margin-top:14px;font-size:15.5px;line-height:1.55;color:var(--ink2)">Сайт целиком за 18.08–16.09: 1 956 визитов, из Instagram примерно 678 — треть всего трафика, из поиска 18 за месяц. Цель «Клик CTA Поговорить» — 9 срабатываний, «Клик на тариф» — 2.</p>
+</div>
+<div class="box">
+<h3>Мусор в воронках</h3>
+<div class="rows" style="margin-top:10px">
+<div class="rw bad"><b>✕</b><span><b>«ЭФИР»</b> активна, последний раз срабатывала 14.09 и продолжает выдавать ссылку на августовское событие.</span></div>
+<div class="rw bad"><b>✕</b><span><b>«НАБОР»</b> по слову «набор» выдаёт подборку мобильных приложений. Человек, который пишет «набор» про поток MBGA, получает ссылки на App Store.</span></div>
+<div class="rw bad"><b>✕</b><span><b>«ПЛАТФОРМА»</b> срабатывает на слова «ссылка» и «ссылку» по вхождению: любое упоминание слова «ссылка» в директе запускает промо Create Today. 85 входов, 0 конверсий.</span></div>
+<div class="rw bad"><b>✕</b><span><b>«ФЛАГИ»</b> (249 кликов) и «НАБОР» (19) уводят людей через <span class="mono" style="font-size:12.5px">r.bothelp.io</span> в список Hey Sash мимо твоей воронки.</span></div>
+<div class="rw bad"><b>✕</b><span><b>Big Sale</b> до сих пор включена: 32 входа в IG, 107 в TG, 0 конверсий.</span></div>
+<div class="rw bad"><b>✕</b><span>Пять легаси-воронок с триггерами по конкретным постам и шесть тестовых «НЕ АКТИВИРОВАТЬ» висят на паузе с июля.</span></div>
+</div>
+</div>
+</div>
+</div></section>
+
+<!-- 6. ПЛАН -->
+<section id="plan" class="dark"><div class="wrap">
+<div class="lab">Раздел 05 · план</div>
+<h2>Что менять <u>и когда</u></h2>
+<div class="plan">
+<div>
+<p class="sub" style="color:#8cc4ff">Сегодня, за час</p>
+<ul class="ck">
+<li><b>Переписать био.</b> Вариант 1 или 3. Условие одно: слово, которое надо написать, должно быть выше обрезки — в первых четырёх строках.</li>
+<li><b>Переписать поле имени.</b> «Андрей Андреев · AI-агенты для рилсов и постов».</li>
+<li><b>Починить номер потока.</b> В посте от 04.09 стоит «Пятый поток», должен быть шестой. Две минуты.</li>
+<li><b>Выключить мусорные воронки.</b> «ЭФИР», Big Sale в IG и TG, «ПЛАТФОРМА» на слово «ссылка», пять легаси, шесть тестовых.</li>
+<li><b>Убрать сторис с таблицей «Апрель — Май — Июнь»</b> из «Закрытой группы».</li>
+</ul>
+</div>
+<div>
+<p class="sub" style="color:#8cc4ff">До старта 21.09</p>
+<ul class="ck">
+<li><b>Продающая карусель под шестой поток</b> — сегодня или завтра. По схеме тех четырёх, что сработали: история и цифры на слайдах, слово в подписи. Вместо «мест 2 из 8» — кейс участницы с цифрой.</li>
+<li><b>Завести воронку на слово МОНТАЖ.</b> Три шага, без follow-gate.</li>
+<li><b>Убрать follow-gate из «экскурсии»</b> или отложить его. Если подписка нужна, проси её после видео.</li>
+<li><b>Починить второй обрыв.</b> Напоминание после видео получают 301 из 938 — значит, оно просто не всем уходит. Чинится в настройках.</li>
+<li><b>Собрать актуальный «Рилсы за 30 мин»</b> — 6–8 сторис. Единственная витрина нового продукта внутри профиля.</li>
+<li><b>Завести цель <span class="mono" style="font-size:13px">montager_signup</span> в Метрике.</b> Код её уже вызывает, цели нет.</li>
+</ul>
+</div>
+<div>
+<p class="sub" style="color:#8cc4ff">После 21.09</p>
+<ul class="ck">
+<li><b>Пересобрать актуальные в шесть блоков.</b> «Тантру», «Голос», «3 дочки», «Тело» — в архив, не удаляя.</li>
+<li><b>Переснять «Новеньким»</b> целиком, 10–12 сторис, на сегодняшних цифрах.</li>
+<li><b>Поставить кейсы в ритм</b> — раз в две недели. Сейчас кейс Даши увидели 1 134 человека из 69 тысяч.</li>
+<li><b>Перевести доказательства продукта из пробных рилсов в карусели.</b> «34 минуты», «15 минут», «72 минуты» — это готовые заголовки карусели.</li>
+<li><b>Сократить производство пробных рилсов.</b> 57 роликов за 55 дней дали 50 850 охвата и почти ноль комментариев.</li>
+<li><b>Убрать из ленты три рубрики:</b> «Итоги недели», «эксперту такому-то», отчёты о собственной статистике.</li>
+<li><b>Сделать главную сайта одностраничником под один продукт</b> — либо ссылка в шапке ведёт прямо на <span class="mono" style="font-size:13px">/montager/</span>.</li>
+<li><b>Назвать цену хотя бы иногда.</b> За 55 дней цена прозвучала в одном посте из 93.</li>
+</ul>
+</div>
+</div>
+
+<div class="keep" style="color:var(--ink)">
+<h3>Что не трогать</h3>
+<p>Цитатные карусели про людей и книги. 20 публикаций, медиана 22 998 охвата, 334 сохранения, 167 репостов. Это то, что держит аккаунт и приводит людей. Никаких правок, кроме одной: в конце такой карусели человеку некуда идти. В половине из них нет ни слова о том, кто ты и что делаешь.</p>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="lab">Приложение</div>
+<h3 style="font-size:26px;margin-bottom:18px">Что не удалось получить</h3>
+<div class="rows" style="max-width:900px">
+<div class="rw"><b>—</b><span><b>follows и profile_visits по каждому посту.</b> Graph API их для этого аккаунта не отдаёт ни для каруселей, ни для рилсов. «Какой пост приводит подписчиков» напрямую не считается; пришлось сопоставлять дневной прирост с датами постов.</span></div>
+<div class="rw"><b>—</b><span><b>profile_links_taps.</b> Отдаёт 0 за все три 30-дневных окна. Отличить «нет кликов» от «метрика не собирается» по API нельзя.</span></div>
+<div class="rw"><b>—</b><span><b>Follower_count по дням глубже 30 дней.</b> API отдаёт только последние 30 дней, за июнь-июль прирост сравнить не получится.</span></div>
+<div class="rw"><b>—</b><span><b>Кривая удержания рилсов по секундам.</b> В API её нет, только средний просмотр и доля пропусков. По 13 рилсам в ленте: средний просмотр 10,9 с, доля пропусков 48,6 %.</span></div>
+<div class="rw"><b>—</b><span><b>Реальные ссылки внутри воронки «экскурсия».</b> Они персональные, выдаются вебхуком под конкретного человека. Проверить их можно только войдя в воронку живым контактом, чего я не делал.</span></div>
+<div class="rw"><b>—</b><span><b>Число фактических продаж.</b> Оплаты идут на Create Today мимо ChatPlace, в воронке <span class="mono" style="font-size:13px">soldProducts = 0</span> по техническим причинам, из этого нельзя делать вывод об отсутствии продаж.</span></div>
+<div class="rw"><b>—</b><span><b>Вид профиля глазами постороннего.</b> Снято из твоей же сессии, поэтому на скриншоте кнопки «Редактировать профиль» вместо «Подписаться». Текст био, ссылки и обрезка под «ещё» от этого не меняются.</span></div>
+</div>
+<p class="fin">Страница собрана 17.09.2026 · выгрузка 17.09.2026, 14:40 МСК · Instagram Graph API, залогиненная сессия, ChatPlace, Яндекс.Метрика · служебная страница, noindex</p>
+</div></footer>
+
+<div id="lb"><button class="x" aria-label="закрыть">✕</button><div class="ti"></div><img src="" alt=""></div>
+
+<script>
+var V={
+1:{name:"Андрей Андреев · AI-агенты для рилсов и постов",nl:46,bl:114,
+ bio:["Люди не лиды. Ясность вместо суеты.","AI-агент монтирует ваш рилс за 30 минут.","Напишите слово МОНТАЖ — пришлю пример"],
+ link:"Агент монтирует рилс за 30 минут",
+ note:"Две ценности сжаты в одну строку и остаются на первом месте. Вторая строка называет продукт и его размер: тридцать минут вместо «системы создания контента». Третья — одно действие, одно слово. Я бы взял этот: он оставляет ценность, называет, что ты продаёшь, и помещается в четыре видимые строки."},
+2:{name:"Андрей Андреев | рилсы и посты на AI-агентах",nl:44,bl:131,
+ bio:["Красота в простоте, ясность вместо суеты.","Собираю AI-агентов: рилсы и посты за 30 минут.","МОНТАЖ — агент. ЭКСКУРСИЯ — группа с 21.09"],
+ link:"Агент монтирует рилс за 30 минут",
+ note:"Годится на ближайшие две недели, пока идёт набор в шестой поток и запускается агент. Минус честный: два кодовых слова в одной шапке — это два решения вместо одного, часть людей не выберет ни одного."},
+3:{name:"Андрей Андреев | монтаж рилсов на AI-агенте",nl:43,bl:123,
+ bio:["Люди не лиды","Красота в простоте","Ясность вместо суеты","Мой AI-агент смонтирует ваш рилс за 30 минут","Слово МОНТАЖ — покажу как"],
+ link:"Агент монтирует рилс за 30 минут",
+ note:"Если три строки принципиальны как три строки — так. Но помни про обрезку: на мобильном видны первые четыре, пятая уходит под «ещё». Значит, действие переезжает на четвёртую строку, а «Ясность вместо суеты» — вниз. Либо четыре строки вместо пяти."}
+};
+var bioEl=document.getElementById("m-bio"),nameEl=document.getElementById("m-name"),
+    cB=document.getElementById("c-bio"),cN=document.getElementById("c-name"),cL=document.getElementById("c-lines"),
+    noteEl=document.getElementById("m-note"),lnkEl=document.querySelector(".mock .lnk");
+function show(k){
+  var v=V[k];nameEl.textContent=v.name;lnkEl.textContent=v.link;
+  bioEl.innerHTML="";
+  v.bio.forEach(function(l,i){var d=document.createElement("div");
+    if(i===4){d.innerHTML=l.slice(0,14)+'… <span class="cut">ещё</span>';}else{d.textContent=l;}
+    bioEl.appendChild(d);});
+  cB.textContent=v.bl;cN.textContent=v.nl;
+  cL.textContent=v.bio.length>4?("строк: "+v.bio.length+", пятая уходит под «ещё»"):("строк: "+v.bio.length+", все видны");
+  noteEl.textContent=v.note;
+}
+document.querySelectorAll(".tabs button").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".tabs button").forEach(function(o){o.setAttribute("aria-selected","false")});
+    b.setAttribute("aria-selected","true");show(b.dataset.v);});
+});
+show("1");
+
+var lb=document.getElementById("lb"),lbImg=lb.querySelector("img"),lbTi=lb.querySelector(".ti");
+document.querySelectorAll(".hc").forEach(function(c){
+  c.addEventListener("click",function(){lbImg.src=c.dataset.img;lbTi.textContent=c.dataset.ti;lb.classList.add("on");document.body.style.overflow="hidden";});
+});
+function closeLb(){lb.classList.remove("on");document.body.style.overflow="";}
+lb.querySelector(".x").addEventListener("click",closeLb);
+lb.addEventListener("click",function(e){if(e.target===lb||e.target===lbImg)closeLb();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb();});
+</script>
+</body></html>
