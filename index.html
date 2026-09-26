@@ -255,6 +255,8 @@ footer .fin{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mu
 .bio3 .l .cut{color:var(--mut)}
 .bio3 .c{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--mut);margin-top:10px}
 .bio3 p{font-size:13.5px;line-height:1.45;color:var(--ink2);margin-top:10px}
+.gdraft{background:#FFF1C9;border:1px solid #F2C94C;border-radius:12px;padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.5;color:#6b4e00;margin-bottom:6px}
+.gdraft:before{content:"ЧЕРНОВИК · ";font-weight:600}
 .gjump{margin-top:26px;display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:13px 22px;font:500 15px Inter,sans-serif;cursor:pointer}
 .gjump:after{content:"✳";color:#8cc4ff}
 @media(max-width:980px){.gbtns{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}.bios{grid-template-columns:1fr}.basis{grid-template-columns:repeat(3,1fr)}.car{max-width:100%}}
@@ -685,9 +687,19 @@ lb.addEventListener("click",function(e){if(e.target===lb||e.target===lbImg)close
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closeLb();});
 </script>
 <script>
+var GEN_PAGE = {profile: "andreev",
+ steps: {
+  highlights: ["Читаю профиль @andreyandreev.me", "Смотрю восемь текущих актуальных — 275 сторис", "Снимаю дизайн-систему с ленты: цвета, шрифты, отметки", "Раскладываю маршрут нового человека на шесть блоков", "Рисую обложки 1080×1920", "Режу круглые превью и собираю архив"],
+  post: ["Читаю 150 публикаций с охватами", "Ищу пост, который залетел сильнее всех", "Определяю серию: цитатные карусели «в стиле Стаца»", "Беру цитаты из проверенного цитатника, не из памяти", "Верстаю обложку и шесть кадров в дизайне серии", "Пишу подпись в голосе серии"],
+  bio: ["Читаю шапку: что видно до «ещё»", "Считаю знаки, лимит 150", "Собираю три варианта"]
+},
+ titles: {highlights: "Хайлайты по новому маршруту", post: "Следующий выпуск лучшей серии", bio: "Новое био"}};
+</script>
+<script>
 /* ===== Генерация: демо сейчас, живая генерация — заменой одной функции generate() ===== */
 var GEN = {
-  profile: (new URLSearchParams(location.search).get("p") || "andreev").replace(/[^a-z0-9_-]/gi, ""),
+  profile: (new URLSearchParams(location.search).get("p") || GEN_PAGE.profile).replace(/[^a-z0-9_-]/gi, ""),
+  steps: GEN_PAGE.steps, titles: GEN_PAGE.titles,
   endpoint: null,          // сюда встанет URL воркера, например "https://gen.andreyandreev.me/generate"
   demoMinMs: {highlights: 8200, post: 9400, bio: 6200}
 };
@@ -707,12 +719,7 @@ function generate(kind) {
     .then(function (all) { return {kind: kind, base: base, profile: all.profile, data: all[kind]}; });
 }
 
-var STEPS = {
-  highlights: ["Читаю профиль @andreyandreev.me", "Смотрю восемь текущих актуальных — 275 сторис", "Снимаю дизайн-систему с ленты: цвета, шрифты, отметки", "Раскладываю маршрут нового человека на шесть блоков", "Рисую обложки 1080×1920", "Режу круглые превью и собираю архив"],
-  post: ["Читаю 150 публикаций с охватами", "Ищу пост, который залетел сильнее всех", "Определяю серию: цитатные карусели «в стиле Стаца»", "Беру цитаты из проверенного цитатника, не из памяти", "Верстаю обложку и шесть кадров в дизайне серии", "Пишу подпись в голосе серии"],
-  bio: ["Читаю шапку: что видно до «ещё»", "Считаю знаки, лимит 150", "Собираю три варианта"]
-};
-var TITLES = {highlights: "Хайлайты по новому маршруту", post: "Следующий выпуск лучшей серии", bio: "Новое био"};
+var STEPS = GEN.steps, TITLES = GEN.titles;
 
 function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
 function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); }
@@ -777,10 +784,10 @@ var RENDER = {
     box.appendChild(row);
     box.appendChild(el("div", "gsub", "было → стало"));
     var ba = el("div", "ba");
-    var b1 = el("div", "", '<div class="lb">было · 17.09.2026, 8 блоков, 7 старше года</div>'), r1 = el("div", "igrow");
+    var b1 = el("div", "", '<div class="lb">' + esc(d.beforeLabel) + '</div>'), r1 = el("div", "igrow");
     d.before.forEach(function (it) { r1.appendChild(el("div", "igc old", '<img src="' + base + it.circle + '" alt="">' + esc(it.title))); });
     b1.appendChild(r1);
-    var b2 = el("div", "", '<div class="lb">стало · 6 блоков, маршрут слева направо</div>'), r2 = el("div", "igrow");
+    var b2 = el("div", "", '<div class="lb">' + esc(d.afterLabel) + '</div>'), r2 = el("div", "igrow");
     d.items.forEach(function (it) { r2.appendChild(el("div", "igc", '<img src="' + base + it.circle + '" alt="">' + esc(it.title))); });
     b2.appendChild(r2);
     ba.appendChild(b1); ba.appendChild(el("div", "ar", "→")); ba.appendChild(b2);
@@ -793,13 +800,13 @@ var RENDER = {
       cv.appendChild(b);
     });
     box.appendChild(cv);
-    var a = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>Скачать архив · 6 обложек + круги</a>');
+    var a = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>' + esc(d.zipLabel) + '</a>');
     box.appendChild(a);
   },
   post: function (box, d, base) {
     var b = d.basis;
     box.appendChild(el("div", "gsub", "за основу · " + esc(b.date) + " · " + esc(b.title) + ' · <a href="' + esc(b.permalink) + '" target="_blank" rel="noopener" style="color:var(--bl)">открыть пост</a>'));
-    box.appendChild(el("div", "basis", "<div><b>" + b.reach + "</b><span>охват</span></div><div><b>" + b.likes + "</b><span>лайков</span></div><div><b>" + b.saved + "</b><span>сохранений</span></div><div><b>" + b.shares + "</b><span>репостов</span></div><div><b>" + b.comments + "</b><span>комментариев</span></div>"));
+    box.appendChild(el("div", "basis", b.stats.map(function (x) { return "<div><b>" + esc(x.v) + "</b><span>" + esc(x.l) + "</span></div>"; }).join("")));
     box.appendChild(el("p", "gnote", esc(b.why) + " " + esc(d.series)));
     box.appendChild(el("div", "gsub", esc(d.next)));
     var g = el("div", "pgrid"), car = el("div", "car"), trk = el("div", "trk"), dots = el("div", "dots");
@@ -811,9 +818,10 @@ var RENDER = {
     trk.addEventListener("scroll", function () { var k = Math.round(trk.scrollLeft / trk.clientWidth); [].forEach.call(dots.children, function (x, j) { x.className = j === k ? "on" : ""; }); });
     car.appendChild(trk); car.appendChild(pv); car.appendChild(nx); car.appendChild(dots);
     var right = el("div", "");
-    right.appendChild(el("div", "gsub", "подпись к посту · " + d.caption.length + " знаков"));
+    if (d.draft) box.insertBefore(el("p", "gdraft", esc(d.draft)), box.firstChild);
+    right.appendChild(el("div", "gsub", (d.draft ? "черновик подписи · " : "подпись к посту · ") + d.caption.length + " знаков"));
     right.appendChild(el("div", "capt", esc(d.caption)));
-    var acts = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>Скачать 7 кадров + подпись</a>');
+    var acts = el("div", "gacts", '<a class="gbtn" href="' + base + d.zip + '" download>' + esc(d.zipLabel) + '</a>');
     var cp = el("button", "gbtn", "Скопировать подпись");
     cp.addEventListener("click", function () { navigator.clipboard && navigator.clipboard.writeText(d.caption).then(function () { cp.textContent = "Скопировано"; }); });
     acts.appendChild(cp); right.appendChild(acts);
@@ -836,4 +844,5 @@ var RENDER = {
 document.querySelectorAll(".gb").forEach(function (b) { b.addEventListener("click", function () { run(b.dataset.k); }); });
 document.querySelectorAll(".gjump").forEach(function (b) { b.addEventListener("click", function () { run(b.dataset.k); }); });
 </script>
+
 </body></html>
